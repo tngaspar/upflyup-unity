@@ -14,6 +14,8 @@ public class Score : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = (player.position.y - playerStartPos).ToString("0");
+        // scoreText.text = (player.position.y - playerStartPos).ToString("0");
+        scoreText.text = (player.position.y - 1.25).ToString("0");
+
     }
 }

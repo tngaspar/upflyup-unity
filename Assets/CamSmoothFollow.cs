@@ -11,6 +11,12 @@ public class CamSmoothFollow : MonoBehaviour
     {
         Vector3 desiredPosition = transform.position = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        transform.position = smoothedPosition; 
+        
+        transform.position = smoothedPosition;
+        if (transform.position.y < 15)
+        {
+            transform.position = new Vector3(transform.position.x, 15, transform.position.z);
+        }
+
     }
 }
