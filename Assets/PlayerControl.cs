@@ -16,13 +16,18 @@ public class PlayerControl : MonoBehaviour
     float speed;
     public float speedtoMove = .1f;
 
+    public int numMoves = 2;
+    int moves = 0;
+    int stillcount = 0;
+    public int framestomove = 10;
+
     private void Update()
     {
         speed = rb.velocity.magnitude;
-        if (Input.touchCount > 0 && speed < speedtoMove)
+        if (Input.touchCount > 0 && moves < numMoves)
         {
             touch = Input.GetTouch(0);
-
+            
             if (touch.phase == TouchPhase.Began)
             {
                 DragStart();
@@ -34,7 +39,20 @@ public class PlayerControl : MonoBehaviour
             if (touch.phase == TouchPhase.Ended && lr.positionCount != 0)
             {
                 DragRelease();
+                moves += 1; 
             }
+        }
+        else if (speed < speedtoMove)
+        {
+            stillcount += 1;
+            if (stillcount == framestomove)
+            {
+                moves = 0;
+            }
+        }
+        else if (speed >= speedtoMove)
+        {
+            stillcount = 0;
         }
     }
 
