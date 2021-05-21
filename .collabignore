@@ -31,3 +31,9 @@ ehthumbs.db
 [Bb]uild
 sysinfo.txt
 *.stackdump
+
+# Assets
+# ===== 
+Assets/BaryatGames/
+Assets/Brackeys
+Assets/Standard Assets/
