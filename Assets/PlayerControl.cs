@@ -17,7 +17,7 @@ public class PlayerControl : MonoBehaviour
     public float speedtoMove = .1f;
 
     public int numMoves = 2;
-    int moves = 0;
+    public int moves = 0;
     int stillcount = 0;
     public int framestomove = 10;
 
