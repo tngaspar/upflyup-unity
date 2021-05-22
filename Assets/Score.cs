@@ -5,17 +5,14 @@ public class Score : MonoBehaviour
 {
     public Transform player;
     public Text scoreText;
-    private float playerStartPos;
-
-    private void Start()
-    {
-        playerStartPos = player.position.y;
-    }
+    private float playerHeight;
+    private const float baseHeight = 1.25f;
 
     void Update()
     {
         // scoreText.text = (player.position.y - playerStartPos).ToString("0");
-        scoreText.text = (player.position.y - 1.25).ToString("0");
+        playerHeight = player.position.y - baseHeight;
+        scoreText.text = playerHeight.ToString("0");
 
     }
 }

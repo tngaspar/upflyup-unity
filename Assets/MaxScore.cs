@@ -1,11 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MaxScore : MonoBehaviour
 {
     public Text currentScoreText;
     public Text maxScoreText;
+    private int cscore;
+    private int mscore;
 
     void Start()
     {
@@ -15,9 +16,12 @@ public class MaxScore : MonoBehaviour
 
     void Update()
     {
-        // scoreText.text = (player.position.y - playerStartPos).ToString("0");
+        // converting score strings to ints
+        int.TryParse(currentScoreText.text, out cscore);
+        int.TryParse(maxScoreText.text, out mscore);
 
-        if (Convert.ToInt32(currentScoreText.text)> Convert.ToInt32(maxScoreText.text))
+        //update maxscore
+        if ( cscore > mscore)
         {
             maxScoreText.text = currentScoreText.text;
         }
