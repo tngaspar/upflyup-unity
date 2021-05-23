@@ -6,7 +6,7 @@ public class Score : MonoBehaviour
     public Transform player;
     public Text scoreText;
     private float playerHeight;
-    private const float baseHeight = 1.25f;
+    public float baseHeight = .5f;
 
     void Update()
     {
