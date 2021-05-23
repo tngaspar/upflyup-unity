@@ -16,10 +16,11 @@ public class PlayerControl : MonoBehaviour
     float speed;
     public float speedtoMove = .1f;
 
-    public int numMoves = 2;
-    public int moves = 0;
+    public int numMoves = 2; // moves allowed
+    public int moves = 0; // current amount of moves made
     int stillcount = 0;
     public int framestomove = 10;
+
 
     private void Update()
     {
@@ -76,10 +77,31 @@ public class PlayerControl : MonoBehaviour
         Vector3 force = dragStartPos - dragReleasePos;
         Vector3 clampedForce = Vector3.ClampMagnitude(force, maxDrag) * power;
 
+        // remove this for original movement
+        ResetRigidBody();
+
         rb.AddForce(clampedForce, ForceMode2D.Impulse);
 
     }
 
+    void ResetRigidBody()
+    {
+        rb.velocity = new Vector2(0f, 0f);
+        //rb.angularVelocity = 0f;
+    }
 
+    IEnumerator OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Energy") && moves != 0)
+        {
+            // recover one energy by removing one move
+            moves -= 1;
+            other.gameObject.SetActive(false);
+            yield return new WaitForSeconds(3);
+            other.gameObject.SetActive(true);
+
+            //Destroy(other.gameObject);
+        }
+    }
 
 }

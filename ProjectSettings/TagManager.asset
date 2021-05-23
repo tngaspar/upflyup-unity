@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Energy
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3914983837
+    locked: 0
+  - name: Items
+    uniqueID: 2503823975
     locked: 0
   - name: Player
     uniqueID: 1929840387
