@@ -21,6 +21,8 @@ public class PlayerControl : MonoBehaviour
     int stillcount = 0;
     public int framestomove = 10;
 
+    public float waterMass;
+    public float waterGravetyScale;
 
     private void Update()
     {
@@ -92,15 +94,46 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Energy") && moves != 0)
+        if(other.gameObject.CompareTag("Energy"))
         {
             // recover one energy by removing one move
-            moves -= 1;
+            if (moves != 0)
+            {
+                moves -= 1;
+
+            }
             other.gameObject.SetActive(false);
             yield return new WaitForSeconds(3);
             other.gameObject.SetActive(true);
 
-            //Destroy(other.gameObject);
+            //Destroy(other.gameObject
+        }
+
+        if(other.gameObject.CompareTag("Water"))
+            {
+            rb.velocity /= 6;
+            }
+    }
+
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Water"))
+        {
+            rb.gravityScale = waterGravetyScale;
+            rb.mass = waterMass;
+            moves = 0;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            rb.gravityScale = 1f;
+            rb.mass = 1.25f;
+            moves = 1;
+            rb.velocity *= 3;
         }
     }
 
