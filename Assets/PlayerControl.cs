@@ -26,7 +26,6 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        speed = rb.velocity.magnitude;
         if (Input.touchCount > 0 && moves < numMoves)
         {
             touch = Input.GetTouch(0);
@@ -45,12 +44,15 @@ public class PlayerControl : MonoBehaviour
                 moves += 1; 
             }
         }
-        else if (speed < speedtoMove)
+
+        speed = rb.velocity.magnitude;
+        if (speed < speedtoMove)
         {
             stillcount += 1;
             if (stillcount == framestomove)
             {
                 moves = 0;
+                stillcount = 0;
             }
         }
         else if (speed >= speedtoMove)

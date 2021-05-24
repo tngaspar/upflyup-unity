@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Energy
   - Water
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
