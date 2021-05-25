@@ -2364,7 +2364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341889662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.7, y: 0.4, z: 0}
+  m_LocalPosition: {x: 20.07, y: 85.68, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2456,7 +2456,7 @@ MonoBehaviour:
   numMoves: 2
   moves: 0
   framestomove: 5
-  waterMass: 8
+  waterMass: 6
   waterGravetyScale: 0.15
 --- !u!120 &341889668
 LineRenderer:

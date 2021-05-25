@@ -113,7 +113,7 @@ public class PlayerControl : MonoBehaviour
 
         if(other.gameObject.CompareTag("Water"))
             {
-            rb.velocity /= 6;
+            rb.velocity /= 3;
             }
     }
 

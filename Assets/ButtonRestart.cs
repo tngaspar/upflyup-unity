@@ -43,9 +43,11 @@ public class ButtonRestart : MonoBehaviour
             //setting player position to selected checkpoint
             if (player.transform.position.y < maxy.transform.position.y)
             { 
-            player.GetComponent<Transform>().position = maxy.transform.position;
-            player.GetComponent<Transform>().rotation = maxy.transform.rotation;
-            player.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 2f);
+                player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+                player.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+                player.GetComponent<Rigidbody2D>().rotation = 0f;
+                player.GetComponent<Transform>().rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+                player.GetComponent<Transform>().position = maxy.transform.position;
             }
         }
     }
