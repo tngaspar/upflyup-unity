@@ -24,12 +24,15 @@ public class PlayerControl : MonoBehaviour
     public float waterMass;
     public float waterGravetyScale;
 
+    //for ropes
+    public bool onRope = false;
+
     private void Update()
     {
         if (Input.touchCount > 0 && moves < numMoves)
         {
             touch = Input.GetTouch(0);
-            
+
             if (touch.phase == TouchPhase.Began)
             {
                 DragStart();
@@ -40,8 +43,9 @@ public class PlayerControl : MonoBehaviour
             }
             if (touch.phase == TouchPhase.Ended && lr.positionCount != 0)
             {
+                onRope = false;
                 DragRelease();
-                moves += 1; 
+                moves += 1;
             }
         }
 
@@ -59,21 +63,25 @@ public class PlayerControl : MonoBehaviour
         {
             stillcount = 0;
         }
+
     }
 
-    void DragStart() {
+    void DragStart()
+    {
         dragStartPos = Camera.main.ScreenToWorldPoint(touch.position);
         dragStartPos.z = 0f;
         lr.positionCount = 1;
         lr.SetPosition(0, dragStartPos);
     }
-    void Dragging() {
+    void Dragging()
+    {
         Vector3 draggingPos = Camera.main.ScreenToWorldPoint(touch.position);
         draggingPos.z = 0f;
         lr.positionCount = 2;
         lr.SetPosition(1, draggingPos);
     }
-    void DragRelease() {
+    void DragRelease()
+    {
         lr.positionCount = 0;
 
         Vector3 dragReleasePos = Camera.main.ScreenToWorldPoint(touch.position);
@@ -96,7 +104,7 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Energy"))
+        if (other.gameObject.CompareTag("Energy"))
         {
             // recover one energy by removing one move
             if (moves != 0)
@@ -111,16 +119,16 @@ public class PlayerControl : MonoBehaviour
             //Destroy(other.gameObject
         }
 
-        if(other.gameObject.CompareTag("Water"))
-            {
+        if (other.gameObject.CompareTag("Water"))
+        {
             rb.velocity /= 3;
-            }
+        }
     }
 
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Water"))
+        if (other.gameObject.CompareTag("Water"))
         {
             rb.gravityScale = waterGravetyScale;
             rb.mass = waterMass;
@@ -140,3 +148,5 @@ public class PlayerControl : MonoBehaviour
     }
 
 }
+
+

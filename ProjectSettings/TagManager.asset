@@ -7,6 +7,9 @@ TagManager:
   - Energy
   - Water
   - Checkpoint
+  - RopeHook
+  - RopeEnd
+  - RopeSegment
   layers:
   - Default
   - TransparentFX
@@ -50,11 +53,11 @@ TagManager:
   - name: Items
     uniqueID: 2503823975
     locked: 0
-  - name: Player
-    uniqueID: 1929840387
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1929840387
     locked: 0
   - name: Water
     uniqueID: 4245368517

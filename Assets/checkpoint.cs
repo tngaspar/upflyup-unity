@@ -7,7 +7,7 @@ public class checkpoint : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && transform.gameObject.CompareTag("Untagged"))
         {
