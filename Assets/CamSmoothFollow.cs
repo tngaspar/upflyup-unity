@@ -9,7 +9,7 @@ public class CamSmoothFollow : MonoBehaviour
     public int camLowerY = 19;
     public int[] xInterval = new int[2];
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         Vector3 desiredPosition = transform.position = target.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
