@@ -33,20 +33,5 @@ public class MovePlatform : MonoBehaviour
 
         thisTransform.position = Vector3.MoveTowards(thisTransform.position, currentTarget.position, step);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.parent = transform;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.parent = null;
-        }
-    }
 }
+

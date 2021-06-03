@@ -57,7 +57,7 @@ public class MovingPlatform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         // Manage how the platform have to move according to movementType var
         switch (movementType)
