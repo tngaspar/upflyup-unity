@@ -49,7 +49,7 @@ MonoBehaviour:
     type: 3}
   prefabRopeEnd: {fileID: 385725155495442001, guid: 7b0e3fb04a6808d4681f733fba396446,
     type: 3}
-  numLinks: 12
+  numLinks: 4
 --- !u!1 &4827978655347682459
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 34.4474, y: 144.02}
+  m_ConnectedAnchor: {x: 34.35345, y: 219.7953}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
