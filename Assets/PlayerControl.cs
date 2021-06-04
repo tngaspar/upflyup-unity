@@ -69,6 +69,7 @@ public class PlayerControl : MonoBehaviour
     void DragStart()
     {
         dragStartPos = Camera.main.ScreenToWorldPoint(touch.position);
+        //dragStartPos = Camera.main.ScreenToViewportPoint(touch.position);
         dragStartPos.z = 0f;
         lr.positionCount = 1;
         lr.SetPosition(0, dragStartPos);
@@ -76,6 +77,7 @@ public class PlayerControl : MonoBehaviour
     void Dragging()
     {
         Vector3 draggingPos = Camera.main.ScreenToWorldPoint(touch.position);
+        //draggingPos = Camera.main.ScreenToViewportPoint(touch.position);
         draggingPos.z = 0f;
         lr.positionCount = 2;
         lr.SetPosition(1, draggingPos);
@@ -85,6 +87,7 @@ public class PlayerControl : MonoBehaviour
         lr.positionCount = 0;
 
         Vector3 dragReleasePos = Camera.main.ScreenToWorldPoint(touch.position);
+        //dragReleasePos = Camera.main.ScreenToViewportPoint(touch.position);
         dragReleasePos.z = 0f;
         Vector3 force = dragStartPos - dragReleasePos;
         Vector3 clampedForce = Vector3.ClampMagnitude(force, maxDrag) * power;
