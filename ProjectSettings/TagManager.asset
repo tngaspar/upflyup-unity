@@ -10,6 +10,7 @@ TagManager:
   - RopeHook
   - RopeEnd
   - RopeSegment
+  - FallingPlatform
   layers:
   - Default
   - TransparentFX
@@ -61,4 +62,7 @@ TagManager:
     locked: 0
   - name: Water
     uniqueID: 4245368517
+    locked: 0
+  - name: OverWaterTerrain
+    uniqueID: 1728211431
     locked: 0

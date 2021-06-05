@@ -55,7 +55,7 @@ public class AttachPlayer : MonoBehaviour
             
             
 
-            Debug.Log(player.transform.position.y - goal.y);
+            //Debug.Log(player.transform.position.y - goal.y);
 
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
             player.GetComponent<Rigidbody2D>().angularVelocity = 0f;
