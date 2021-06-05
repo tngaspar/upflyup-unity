@@ -27,8 +27,12 @@ public class AttachPlayer : MonoBehaviour
             player = other.gameObject;
             player.GetComponent<PlayerControl>().onRope = true;
             thisRope = true;
-
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        thisRope = false;
     }
 
 
@@ -42,9 +46,9 @@ public class AttachPlayer : MonoBehaviour
             
             float distance = Math.Abs(player.transform.position.y - goal.y);
 
-            if (distance > 0.05)
+            if (distance > 0.005)
             {
-                player.transform.position = Vector3.Lerp(player.transform.position, goal, 7 * Time.deltaTime/distance);
+                player.transform.position = Vector3.Lerp(player.transform.position, goal, 5 * Time.deltaTime);///distance);
             }
             else
             {
@@ -69,5 +73,9 @@ public class AttachPlayer : MonoBehaviour
 
     }
 
+    IEnumerator Wait(int frames)
+    {
+        yield return frames;
+    }
 
 }
