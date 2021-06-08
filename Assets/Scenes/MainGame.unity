@@ -5331,6 +5331,7 @@ GameObject:
   - component: {fileID: 341889668}
   - component: {fileID: 341889667}
   - component: {fileID: 341889666}
+  - component: {fileID: 341889669}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -5595,6 +5596,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &341889669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341889662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7700667f8923eb64999a2abe2c06e55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &348733087
 PrefabInstance:
   m_ObjectHideFlags: 0

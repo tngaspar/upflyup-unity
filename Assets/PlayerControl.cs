@@ -29,6 +29,7 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
+        GetComponent<Player>().SavePlayer();
         if (Input.touchCount > 0 && moves < numMoves)
         {
             touch = Input.GetTouch(0);
