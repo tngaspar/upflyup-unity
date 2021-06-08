@@ -5608,6 +5608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7700667f8923eb64999a2abe2c06e55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highestCheckpointY: 0
 --- !u!1001 &348733087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37665,7 +37666,7 @@ PrefabInstance:
     - target: {fileID: 3339711896948112899, guid: 117712ddd2f34ea43a06b8788ebb7c95,
         type: 3}
       propertyPath: m_SortingLayer
-      value: -4
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3339711896948112899, guid: 117712ddd2f34ea43a06b8788ebb7c95,
         type: 3}

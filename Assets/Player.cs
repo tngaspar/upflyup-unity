@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float highestCheckpointY = 0;
 
     private void Start()
     {
@@ -26,5 +27,27 @@ public class Player : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
+
+        //Loading number of moves availavle
+        GetComponent<PlayerControl>().moves = data.moves;
+
+        //Load active checkpoints
+        LoadCheckpoints(data.highestCheckpointY);
+        Debug.Log("Loading");
+
     }
+
+
+    private void LoadCheckpoints(float highestY)
+    {
+        foreach(GameObject flag in GameObject.FindGameObjectsWithTag("CheckpointNull"))
+        {
+            Debug.Log(highestY);
+            if (flag.transform.position.y <= highestY)
+            {
+                flag.GetComponent<checkpoint>().activateCheckpoint();
+            }
+        }
+    }
+
 }

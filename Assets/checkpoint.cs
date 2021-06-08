@@ -9,11 +9,22 @@ public class checkpoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && transform.gameObject.CompareTag("Untagged"))
+        if (other.gameObject.CompareTag("Player") && transform.gameObject.CompareTag("CheckpointNull"))
         {
-            spriteRenderer.sprite = newSprite;
-            transform.gameObject.tag = "Checkpoint";
+            activateCheckpoint();
+            if (transform.position.y >= other.GetComponent<Player>().highestCheckpointY)
+            {
+                other.GetComponent<Player>().highestCheckpointY = transform.position.y;
+            }
+
+
         }
+    }
+
+    public void activateCheckpoint()
+    {
+        spriteRenderer.sprite = newSprite;
+        transform.gameObject.tag = "Checkpoint";
     }
 
 

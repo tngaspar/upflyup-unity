@@ -11,6 +11,7 @@ TagManager:
   - RopeEnd
   - RopeSegment
   - FallingPlatform
+  - CheckpointNull
   layers:
   - Default
   - TransparentFX

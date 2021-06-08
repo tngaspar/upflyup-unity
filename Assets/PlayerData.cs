@@ -7,6 +7,7 @@ public class PlayerData
 {
     public float[] position;
     public int moves;
+    public float highestCheckpointY;
 
 
     public PlayerData (Player player)
@@ -17,6 +18,10 @@ public class PlayerData
         position[2] = player.transform.position.z;
 
         moves = player.GetComponent<PlayerControl>().moves;
+
+        highestCheckpointY = player.highestCheckpointY;
+        
+
     }
 
 }
