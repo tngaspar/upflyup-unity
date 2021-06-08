@@ -33,7 +33,6 @@ public class Player : MonoBehaviour
 
         //Load active checkpoints
         LoadCheckpoints(data.highestCheckpointY);
-        Debug.Log("Loading");
 
     }
 
@@ -42,7 +41,6 @@ public class Player : MonoBehaviour
     {
         foreach(GameObject flag in GameObject.FindGameObjectsWithTag("CheckpointNull"))
         {
-            Debug.Log(highestY);
             if (flag.transform.position.y <= highestY)
             {
                 flag.GetComponent<checkpoint>().activateCheckpoint();
