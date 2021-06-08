@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     private void Start()
     {
         LoadPlayer();
+        InvokeRepeating("SavePlayer", 0f, 1f);
     }
-
-
 
 
     public void SavePlayer()
