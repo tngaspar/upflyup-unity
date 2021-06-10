@@ -15,5 +15,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void ResetGame()
+    {
+        SaveSystem.DeleteFile();
+    }
 
 }

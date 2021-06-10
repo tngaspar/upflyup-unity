@@ -31,9 +31,22 @@ public static class SaveSystem
         }
         else
         {
-            Debug.LogError("Save file not found in " + path);
+            Debug.Log("Save file not found in " + path);
             return null;
         }
     }
 
+    public static void DeleteFile()
+    {
+        string path = Application.persistentDataPath + "/player.save";
+        try
+        {
+            File.Delete(path);
+        }
+        catch
+        {
+            Debug.Log("Error deleting");
+        }
+
+    }
 }
