@@ -8,9 +8,11 @@ public class Player : MonoBehaviour
 
     public float highestCheckpointY;
 
+    public Rigidbody2D rb;
+
     private void Start()
     {
-        if (loadingActive == true)
+        if (loadingActive == true && SaveSystem.LoadPlayer() != null)
         {
             LoadPlayer();
         }
@@ -32,6 +34,18 @@ public class Player : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
+
+        Vector3 rotation;
+        rotation.x = data.rotation[0];
+        rotation.y = data.rotation[1];
+        rotation.z = data.rotation[2];
+        transform.eulerAngles = rotation;
+
+        //velocity
+        Vector2 velocity;
+        velocity.x = data.velocity[0];
+        velocity.y = data.velocity[1];
+        rb.velocity = velocity;
 
         //Loading number of moves availavle
         GetComponent<PlayerControl>().moves = data.moves;

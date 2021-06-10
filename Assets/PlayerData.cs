@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerData
 {
     public float[] position;
+    public float[] rotation;
+    public float[] velocity;
     public int moves;
     public float highestCheckpointY;
 
@@ -17,10 +19,19 @@ public class PlayerData
         position[1] = player.transform.position.y;
         position[2] = player.transform.position.z;
 
+        rotation = new float[3];
+        rotation[0] = player.transform.eulerAngles.x;
+        rotation[1] = player.transform.eulerAngles.y;
+        rotation[2] = player.transform.eulerAngles.z;
+
+        velocity = new float[2];
+        velocity[0] = player.GetComponent<Rigidbody2D>().velocity.x;
+        velocity[1] = player.GetComponent<Rigidbody2D>().velocity.y;
+
         moves = player.GetComponent<PlayerControl>().moves;
 
         highestCheckpointY = player.highestCheckpointY;
-        Debug.Log(highestCheckpointY);
+        //Debug.Log(position);
         
 
     }
