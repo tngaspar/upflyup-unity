@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float highestCheckpointY = 0;
+    public bool loadingActive = true;
+
+    public float highestCheckpointY;
 
     private void Start()
     {
-        LoadPlayer();
-        InvokeRepeating("SavePlayer", 0f, 1f);
+        if (loadingActive == true)
+        {
+            LoadPlayer();
+        }
+        InvokeRepeating("SavePlayer", 1f, 1f);
     }
 
 
@@ -32,6 +37,7 @@ public class Player : MonoBehaviour
         GetComponent<PlayerControl>().moves = data.moves;
 
         //Load active checkpoints
+        highestCheckpointY = data.highestCheckpointY;
         LoadCheckpoints(data.highestCheckpointY);
 
     }

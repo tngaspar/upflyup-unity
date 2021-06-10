@@ -20,6 +20,7 @@ public class PlayerData
         moves = player.GetComponent<PlayerControl>().moves;
 
         highestCheckpointY = player.highestCheckpointY;
+        Debug.Log(highestCheckpointY);
         
 
     }
