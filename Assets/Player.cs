@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Player : MonoBehaviour
     public float highestCheckpointY;
 
     public Rigidbody2D rb;
+
+    public int seconds;
+    public Text timerText;
 
     private void Start()
     {
@@ -22,6 +26,8 @@ public class Player : MonoBehaviour
 
     public void SavePlayer()
     {
+        // updating timer
+        seconds = timerText.GetComponent<TimePlayed>().seconds;
         SaveSystem.SavePlayer(this);
     }
 
@@ -53,6 +59,10 @@ public class Player : MonoBehaviour
         //Load active checkpoints
         highestCheckpointY = data.highestCheckpointY;
         LoadCheckpoints(data.highestCheckpointY);
+
+        //Load timer
+        seconds = data.seconds;
+        timerText.GetComponent<TimePlayed>().seconds = seconds;
 
     }
 

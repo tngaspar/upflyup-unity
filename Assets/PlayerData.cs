@@ -10,6 +10,7 @@ public class PlayerData
     public float[] velocity;
     public int moves;
     public float highestCheckpointY;
+    public int seconds;
 
 
     public PlayerData (Player player)
@@ -31,8 +32,8 @@ public class PlayerData
         moves = player.GetComponent<PlayerControl>().moves;
 
         highestCheckpointY = player.highestCheckpointY;
-        //Debug.Log(position);
-        
+
+        seconds = player.GetComponent<Player>().seconds;
 
     }
 

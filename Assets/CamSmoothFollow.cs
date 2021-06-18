@@ -12,12 +12,12 @@ public class CamSmoothFollow : MonoBehaviour
     private float screenWidth;
     private void Start()
     {
-        Debug.Log("Screen width :" + Screen.width);
+        //Debug.Log("Screen width :" + Screen.width);
         
         Vector3 p1 = Camera.main.ScreenToWorldPoint(Vector3.zero);
         Vector3 p2 = Camera.main.ScreenToWorldPoint(Vector3.right);
         float pixelPerUnit = 1/Vector3.Distance(p1, p2);
-        Debug.Log("PixelsperUnit :" + pixelPerUnit);
+        //Debug.Log("PixelsperUnit :" + pixelPerUnit);
         screenWidth = (Screen.width / 2) / pixelPerUnit;
 
     }
