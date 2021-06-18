@@ -26,6 +26,6 @@ public class TimePlayed : MonoBehaviour
 
 
         timeText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, secs);
-        Debug.Log(seconds);
+        //Debug.Log(seconds);
     }
 }
