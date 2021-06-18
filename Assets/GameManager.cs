@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject wonGameUI;
+
     public void WonGame()
     {
-        Debug.Log("WON GAME");
+        wonGameUI.SetActive(true);
     }
 }
