@@ -67,3 +67,6 @@ TagManager:
   - name: OverWaterTerrain
     uniqueID: 1728211431
     locked: 0
+  - name: Plants
+    uniqueID: 3223174889
+    locked: 0
