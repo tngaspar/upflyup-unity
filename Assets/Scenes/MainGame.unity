@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 91548183}
   m_Layer: 0
   m_Name: Walls4
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5452,7 +5452,7 @@ GameObject:
   - component: {fileID: 330035974}
   m_Layer: 0
   m_Name: Walls2
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7710,6 +7710,7 @@ MonoBehaviour:
   waterMass: 6
   waterGravetyScale: 0.15
   onRope: 0
+  audioManager: {fileID: 1781662103}
 --- !u!120 &341889668
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -10353,7 +10354,7 @@ GameObject:
   - component: {fileID: 488718543}
   m_Layer: 0
   m_Name: Wall6
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25109,7 +25110,7 @@ GameObject:
   - component: {fileID: 823885666}
   m_Layer: 0
   m_Name: Walls5
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32645,7 +32646,7 @@ GameObject:
   - component: {fileID: 1150268146}
   m_Layer: 0
   m_Name: Wall7
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48250,7 +48251,7 @@ GameObject:
   - component: {fileID: 1690927847}
   m_Layer: 0
   m_Name: Walls0
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50920,9 +50921,27 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: WallsCollision
-    clip: {fileID: 8300000, guid: 7fc942e6efa61324d99dcf62666bc202, type: 3}
+    clip: {fileID: 8300000, guid: 952adbaf9201b234ba4b5d0e0b4dbec8, type: 3}
     volume: 1
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ConcreteCollision
+    clip: {fileID: 8300000, guid: 4fe5988bd545c4e42bc421e635fe7517, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnterWater
+    clip: {fileID: 8300000, guid: 1b7488364a6e17c468ae55121c95d806, type: 3}
+    volume: 0.15
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: ExitWater
+    clip: {fileID: 8300000, guid: e31ea7a8fa842a94bbd7e7751544be78, type: 3}
+    volume: 0.15
+    pitch: 0.6
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1781662104
@@ -51879,7 +51898,7 @@ GameObject:
   - component: {fileID: 1867267396}
   m_Layer: 0
   m_Name: Walls3
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54176,7 +54195,7 @@ GameObject:
   - component: {fileID: 1947844180}
   m_Layer: 0
   m_Name: Walls1
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56283,7 +56302,7 @@ GameObject:
   - component: {fileID: 1970456462}
   m_Layer: 0
   m_Name: Wall8
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

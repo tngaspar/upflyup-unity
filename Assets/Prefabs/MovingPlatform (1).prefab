@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7126927069260498756}
   m_Layer: 0
   m_Name: MovingPlatform (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

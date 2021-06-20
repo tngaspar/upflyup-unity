@@ -27,6 +27,8 @@ public class PlayerControl : MonoBehaviour
     //for ropes
     public bool onRope = false;
 
+    public AudioManager audioManager;
+
     private void Update()
     {
         if (Input.touchCount > 0 && moves < numMoves)
@@ -125,6 +127,7 @@ public class PlayerControl : MonoBehaviour
         if (other.gameObject.CompareTag("Water"))
         {
             rb.velocity /= 3;
+            audioManager.Play("EnterWater");
         }
     }
 
@@ -147,6 +150,7 @@ public class PlayerControl : MonoBehaviour
             rb.mass = 1.25f;
             moves = 1;
             rb.velocity *= 3;
+            audioManager.Play("ExitWater");
         }
     }
 

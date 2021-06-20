@@ -32,10 +32,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play (string name, float volume = 1f)
+    public void Play (string name, float volume = 0f)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.volume = volume;
+        if (volume != 0f)
+            s.source.volume = volume;
         s.source.Play();
     }
 
