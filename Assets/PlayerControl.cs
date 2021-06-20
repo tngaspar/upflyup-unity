@@ -23,6 +23,7 @@ public class PlayerControl : MonoBehaviour
 
     public float waterMass;
     public float waterGravetyScale;
+    private bool onWater = false;
 
     //for ropes
     public bool onRope = false;
@@ -47,11 +48,14 @@ public class PlayerControl : MonoBehaviour
             {
                 onRope = false;
                 DragRelease();
-
-                if (moves == 0)
-                    audioManager.Play("FirstMove");
-                else if (moves == 1)
-                    audioManager.Play("SecondMove");
+                
+                if(onWater == false)
+                {
+                    if (moves == 0)
+                        audioManager.Play("FirstMove");
+                    else if (moves == 1)
+                        audioManager.Play("SecondMove");
+                }
 
                 moves += 1;
             }
@@ -145,6 +149,7 @@ public class PlayerControl : MonoBehaviour
             rb.gravityScale = waterGravetyScale;
             rb.mass = waterMass;
             moves = 0;
+            onWater = true;
         }
     }
 
@@ -156,6 +161,7 @@ public class PlayerControl : MonoBehaviour
             rb.mass = 1.25f;
             moves = 1;
             rb.velocity *= 3;
+            onWater = false;
             audioManager.Play("ExitWater");
         }
     }
