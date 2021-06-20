@@ -30,9 +30,11 @@ public class PlayerControl : MonoBehaviour
 
     public AudioManager audioManager;
 
+    public GameObject pauseMenu;
+
     private void Update()
     {
-        if (Input.touchCount > 0 && moves < numMoves)
+        if (Input.touchCount > 0 && moves < numMoves && !pauseMenu.activeSelf)
         {
             touch = Input.GetTouch(0);
 
@@ -94,7 +96,7 @@ public class PlayerControl : MonoBehaviour
         lr.positionCount = 2;
         lr.SetPosition(1, draggingPos);
     }
-    void DragRelease()
+    public void DragRelease()
     {
         lr.positionCount = 0;
 

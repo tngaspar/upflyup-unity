@@ -37,6 +37,8 @@ public class ButtonRestart : MonoBehaviour
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
         if (checkpoints.Length != 0)
         {
+            player.GetComponent<PlayerControl>().DragRelease();
+
             //choosing the highest active checkpoint
             maxy = getHighestCheckpoint(checkpoints);
 

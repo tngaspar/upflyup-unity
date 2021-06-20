@@ -11,12 +11,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
 
     public GameManager gameManager;
+
+    public GameObject player;
     public void PauseButtonClick()
     {
         if (!GameIsPaused)
         {
             Pause();
         }
+        player.GetComponent<PlayerControl>().DragRelease();
     }
 
     void Pause()

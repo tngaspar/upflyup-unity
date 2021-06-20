@@ -7711,6 +7711,7 @@ MonoBehaviour:
   waterGravetyScale: 0.15
   onRope: 0
   audioManager: {fileID: 1781662103}
+  pauseMenu: {fileID: 1598920577}
 --- !u!120 &341889668
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -50170,6 +50171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1598920577}
   gameManager: {fileID: 762224818}
+  player: {fileID: 341889662}
 --- !u!114 &1702589604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50946,13 +50948,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FirstMove
     clip: {fileID: 8300000, guid: e1c6edf58ee16fb419ae4615120a6b9b, type: 3}
-    volume: 0.4
+    volume: 0.2
     pitch: 0.5
     loop: 0
     source: {fileID: 0}
   - name: SecondMove
     clip: {fileID: 8300000, guid: acc32a957340e8847be7b3856236065e, type: 3}
-    volume: 0.4
+    volume: 0.2
     pitch: 0.5
     loop: 0
     source: {fileID: 0}
