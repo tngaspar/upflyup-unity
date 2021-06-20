@@ -47,6 +47,12 @@ public class PlayerControl : MonoBehaviour
             {
                 onRope = false;
                 DragRelease();
+
+                if (moves == 0)
+                    audioManager.Play("FirstMove");
+                else if (moves == 1)
+                    audioManager.Play("SecondMove");
+
                 moves += 1;
             }
         }

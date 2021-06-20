@@ -50944,6 +50944,18 @@ MonoBehaviour:
     pitch: 0.6
     loop: 0
     source: {fileID: 0}
+  - name: FirstMove
+    clip: {fileID: 8300000, guid: e1c6edf58ee16fb419ae4615120a6b9b, type: 3}
+    volume: 0.5
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: SecondMove
+    clip: {fileID: 8300000, guid: acc32a957340e8847be7b3856236065e, type: 3}
+    volume: 0.5
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1781662104
 Transform:
   m_ObjectHideFlags: 0
