@@ -51,6 +51,9 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //accound for changes in game speed
+        speed = speed / FindObjectOfType<GameManager>().normalGameSpeed;
+
         // Set start position
         startPosition = this.transform.position;
         zigzagStep = 0f;
