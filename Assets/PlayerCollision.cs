@@ -16,5 +16,7 @@ public class PlayerCollision : MonoBehaviour
             audioManager.Play("WallsCollision", volume);
         else if (collision.gameObject.CompareTag("FallingPlatform"))
             audioManager.Play("ConcreteCollision", volume);
+        else if (collision.gameObject.CompareTag("Bouncy"))
+            audioManager.Play("Bouncy", volume);
     }
 }

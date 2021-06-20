@@ -8972,7 +8972,7 @@ GameObject:
   - component: {fileID: 467043753}
   m_Layer: 0
   m_Name: Bouncy7
-  m_TagString: Untagged
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9371,7 +9371,7 @@ GameObject:
   - component: {fileID: 477839922}
   m_Layer: 0
   m_Name: Bouncy6
-  m_TagString: Untagged
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12860,7 +12860,7 @@ GameObject:
   - component: {fileID: 492361595}
   m_Layer: 0
   m_Name: Bouncy8
-  m_TagString: Untagged
+  m_TagString: Bouncy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50956,6 +50956,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: acc32a957340e8847be7b3856236065e, type: 3}
     volume: 0.2
     pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Bouncy
+    clip: {fileID: 8300000, guid: 60b0a46d930b1a444a6b289e0bdca98b, type: 3}
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1781662104
