@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+
+    public GameManager gameManager;
     public void PauseButtonClick()
     {
         if (!GameIsPaused)
@@ -27,14 +29,14 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = gameManager.normalGameSpeed;
         GameIsPaused = false;
     }
 
     public void LoadMenu()
     {
         GameIsPaused = false;
-        Time.timeScale = 1f;
+        Time.timeScale = gameManager.normalGameSpeed;
         SceneManager.LoadScene(0);
     }
 

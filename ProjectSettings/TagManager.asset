@@ -12,6 +12,7 @@ TagManager:
   - RopeSegment
   - FallingPlatform
   - CheckpointNull
+  - Terrain
   layers:
   - Default
   - TransparentFX
