@@ -50946,13 +50946,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FirstMove
     clip: {fileID: 8300000, guid: e1c6edf58ee16fb419ae4615120a6b9b, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 0.5
     loop: 0
     source: {fileID: 0}
   - name: SecondMove
     clip: {fileID: 8300000, guid: acc32a957340e8847be7b3856236065e, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 0.5
     loop: 0
     source: {fileID: 0}
@@ -60660,9 +60660,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -49598779
+  m_SortingLayer: 2
+  m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
