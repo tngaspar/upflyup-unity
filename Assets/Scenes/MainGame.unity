@@ -7710,7 +7710,6 @@ MonoBehaviour:
   waterMass: 6
   waterGravetyScale: 0.15
   onRope: 0
-  audioManager: {fileID: 1781662103}
   pauseMenu: {fileID: 1598920577}
 --- !u!120 &341889668
 LineRenderer:
@@ -7860,7 +7859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ea69563d8f65e49ba74c7a5244f19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 1781662103}
 --- !u!1001 &348733087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27095,7 +27093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &855414547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27115,8 +27113,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 10ebe7a8e14363545946d5a92ac0bcb0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -50886,18 +50884,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1758369038}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1781662103 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3343767757127997849, guid: 7533adc4da53351479b94ebd3d543654,
-    type: 3}
-  m_PrefabInstance: {fileID: 3343767758574114830}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d8252a86450fb4e9313b7c016f4b8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1782106698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7119215548599585905, guid: 959df435025095c4091145047abe5496,
@@ -53813,17 +53799,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Won
+  m_text: You Made It!!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9d876933ddc361f4c9ba016dd356ef75, type: 2}
+  m_sharedMaterial: {fileID: 2556154388521769205, guid: 9d876933ddc361f4c9ba016dd356ef75,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3640655872
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -53840,13 +53827,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 75.8
+  m_fontSizeBase: 75.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
