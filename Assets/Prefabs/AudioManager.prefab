@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3343767757127997848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3343767757127997846}
+  - component: {fileID: 3343767757127997849}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3343767757127997846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343767757127997848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3343767757127997849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343767757127997848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d8252a86450fb4e9313b7c016f4b8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: TerrainCollision
+    clip: {fileID: 8300000, guid: 23fce6f423383e444b9e18ab648e050a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WallsCollision
+    clip: {fileID: 8300000, guid: 952adbaf9201b234ba4b5d0e0b4dbec8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ConcreteCollision
+    clip: {fileID: 8300000, guid: 4fe5988bd545c4e42bc421e635fe7517, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnterWater
+    clip: {fileID: 8300000, guid: 1b7488364a6e17c468ae55121c95d806, type: 3}
+    volume: 0.15
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: ExitWater
+    clip: {fileID: 8300000, guid: e31ea7a8fa842a94bbd7e7751544be78, type: 3}
+    volume: 0.15
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: FirstMove
+    clip: {fileID: 8300000, guid: e1c6edf58ee16fb419ae4615120a6b9b, type: 3}
+    volume: 0.2
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: SecondMove
+    clip: {fileID: 8300000, guid: acc32a957340e8847be7b3856236065e, type: 3}
+    volume: 0.2
+    pitch: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Bouncy
+    clip: {fileID: 8300000, guid: 60b0a46d930b1a444a6b289e0bdca98b, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: e0eb8a1b056dc6c47875c610cda7ee6e, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

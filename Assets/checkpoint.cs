@@ -14,6 +14,10 @@ public class checkpoint : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && transform.gameObject.CompareTag("CheckpointNull"))
         {
             activateCheckpoint();
+
+            //play checkpoint sound
+            FindObjectOfType<AudioManager>().Play("Checkpoint");
+
             if (transform.position.y >= other.GetComponent<Player>().highestCheckpointY)
             {
                 other.GetComponent<Player>().highestCheckpointY = transform.position.y;

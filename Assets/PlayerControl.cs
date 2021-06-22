@@ -28,8 +28,6 @@ public class PlayerControl : MonoBehaviour
     //for ropes
     public bool onRope = false;
 
-    public AudioManager audioManager;
-
     public GameObject pauseMenu;
 
     private void Update()
@@ -54,9 +52,9 @@ public class PlayerControl : MonoBehaviour
                 if(onWater == false)
                 {
                     if (moves == 0)
-                        audioManager.Play("FirstMove");
+                        FindObjectOfType<AudioManager>().Play("FirstMove");
                     else if (moves == 1)
-                        audioManager.Play("SecondMove");
+                        FindObjectOfType<AudioManager>().Play("SecondMove");
                 }
 
                 moves += 1;
@@ -139,7 +137,7 @@ public class PlayerControl : MonoBehaviour
         if (other.gameObject.CompareTag("Water"))
         {
             rb.velocity /= 3;
-            audioManager.Play("EnterWater");
+            FindObjectOfType<AudioManager>().Play("EnterWater");
         }
     }
 
@@ -164,7 +162,7 @@ public class PlayerControl : MonoBehaviour
             moves = 1;
             rb.velocity *= 3;
             onWater = false;
-            audioManager.Play("ExitWater");
+            FindObjectOfType<AudioManager>().Play("ExitWater");
         }
     }
 
