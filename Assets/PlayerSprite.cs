@@ -19,5 +19,11 @@ public class PlayerSprite : MonoBehaviour
 
     }
 
+    public void SetSprite(int spritenum)
+    {
+        spriteRenderer.sprite = sprites[spritenum];
+        charclass.GetComponent<CharClass>().charActive = spritenum;
+    }
+
 
 }
