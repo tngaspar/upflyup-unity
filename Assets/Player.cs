@@ -14,8 +14,18 @@ public class Player : MonoBehaviour
     public int seconds;
     public Text timerText;
 
+    public int maxscore;
+    public Text maxScoreText;
+
+    //chars info
+    public bool[] charsUnlocked;
+    public int charActive;
+
     private void Start()
     {
+        charsUnlocked = new bool[4];
+        LoadChars();
+
         if (loadingActive == true && SaveSystem.LoadPlayer() != null)
         {
             LoadPlayer();
@@ -28,7 +38,16 @@ public class Player : MonoBehaviour
     {
         // updating timer
         seconds = timerText.GetComponent<TimePlayed>().seconds;
+        maxscore = maxScoreText.GetComponent<MaxScore>().mscore;
         SaveSystem.SavePlayer(this);
+
+    }
+
+    public void ResetPlayer()
+    {
+        // call this function to reset the game like the old reset file
+        seconds = 0;
+        SaveSystem.SavePlayer(this, true);
     }
 
     public void LoadPlayer()
@@ -64,6 +83,10 @@ public class Player : MonoBehaviour
         seconds = data.seconds;
         timerText.GetComponent<TimePlayed>().seconds = seconds;
 
+        //Load maxScore
+        maxscore = data.maxscore;
+        maxScoreText.GetComponent<MaxScore>().mscore = maxscore;
+
     }
 
 
@@ -78,4 +101,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void LoadChars()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        charsUnlocked = data.charUnlock;
+        charActive = data.charActive;
+    }
+
+    public void SaveCharActive(int num)
+    {
+        charActive = num;
+        SaveSystem.SavePlayer(this, false, true);
+    }
 }

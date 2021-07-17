@@ -7595,7 +7595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341889662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.06, y: 0.51, z: 0}
+  m_LocalPosition: {x: 21, y: 0.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7843,6 +7843,8 @@ MonoBehaviour:
   rb: {fileID: 341889665}
   seconds: 0
   timerText: {fileID: 1655711176}
+  maxscore: 0
+  maxScoreText: {fileID: 778103464}
 --- !u!114 &341889670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24548,6 +24550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 308918697}
   maxScoreText: {fileID: 778103464}
+  mscore: 0
 --- !u!114 &778103464
 MonoBehaviour:
   m_ObjectHideFlags: 0

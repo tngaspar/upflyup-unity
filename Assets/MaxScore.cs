@@ -6,11 +6,11 @@ public class MaxScore : MonoBehaviour
     public Text currentScoreText;
     public Text maxScoreText;
     private int cscore;
-    private int mscore;
+    public int mscore;
 
     void Start()
     {
-        maxScoreText.text = "0";
+        maxScoreText.text = mscore.ToString();
     }
 
 
