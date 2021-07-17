@@ -2,29 +2,29 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public static class SaveSystem
+public class SaveSystem2
 {
-    public static void SavePlayer (Player player, bool reset = false)
+    public static void SaveChar(CharClass charclass)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.save";
+        string path = Application.persistentDataPath + "/char.save";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData(player, reset);
+        CharData data = new CharData(charclass);
 
         formatter.Serialize(stream, data);
         stream.Close();
     }
 
-    public static PlayerData LoadPlayer()
+    public static CharData LoadChar()
     {
-        string path = Application.persistentDataPath + "/player.save";
+        string path = Application.persistentDataPath + "/char.save";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
+            CharData data = formatter.Deserialize(stream) as CharData;
 
             stream.Close();
             return data;
@@ -38,7 +38,7 @@ public static class SaveSystem
 
     public static void DeleteFile()
     {
-        string path = Application.persistentDataPath + "/player.save";
+        string path = Application.persistentDataPath + "/char.save";
         try
         {
             File.Delete(path);

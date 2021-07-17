@@ -13,20 +13,15 @@ public class PlayerData
     public int seconds;
     public int maxscore;
     
-    //persistent character unlock thingy
-    public bool[] charUnlock; //0-3 for each of the unlockable chars
-    public int charActive; //defaults to 0 = initial char
-
-    public PlayerData (Player player, bool reset = false, bool onlychar=false)
+    public PlayerData (Player player, bool reset = false)
     {
-        position = new float[3];
-        rotation = new float[3];
-        velocity = new float[2];
 
-        charUnlock = new bool[4];
-        
-        if (reset == false & onlychar==false)
+        if (reset == false)
         {
+            position = new float[3];
+            rotation = new float[3];
+            velocity = new float[2];
+
             position[0] = player.transform.position.x;
             position[1] = player.transform.position.y;
             position[2] = player.transform.position.z;
@@ -46,12 +41,13 @@ public class PlayerData
 
             maxscore = player.GetComponent<Player>().maxscore;
 
-            //test
-            charUnlock[0] = true;
-            charUnlock[1] = true;
         }
-        else if(reset == true & onlychar ==false)
+        else if(reset == true)
         {
+            position = new float[3];
+            rotation = new float[3];
+            velocity = new float[2];
+            
             position[0] = 21f;
             position[1] = .5f;
             position[2] = 0f;
@@ -67,14 +63,6 @@ public class PlayerData
             seconds = 0;
             maxscore = 0;
 
-            //test
-            charUnlock[0] = false;
-            charUnlock[1] = false;
-        }
-        else if(onlychar == true)
-        {
-            charUnlock = player.GetComponent<Player>().charsUnlocked;
-            charActive = player.GetComponent<Player>().charActive;
         }
 
     }

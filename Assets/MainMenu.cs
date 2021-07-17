@@ -22,4 +22,9 @@ public class MainMenu : MonoBehaviour
         emptyPlayer.GetComponent<Player>().ResetPlayer();
     }
 
+    public void DeleteGameSave()
+    {
+        SaveSystem.DeleteFile();
+    }
+
 }

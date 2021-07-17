@@ -17,14 +17,9 @@ public class Player : MonoBehaviour
     public int maxscore;
     public Text maxScoreText;
 
-    //chars info
-    public bool[] charsUnlocked;
-    public int charActive;
 
     private void Start()
     {
-        charsUnlocked = new bool[4];
-        LoadChars();
 
         if (loadingActive == true && SaveSystem.LoadPlayer() != null)
         {
@@ -101,17 +96,4 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void LoadChars()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        charsUnlocked = data.charUnlock;
-        charActive = data.charActive;
-    }
-
-    public void SaveCharActive(int num)
-    {
-        charActive = num;
-        SaveSystem.SavePlayer(this, false, true);
-    }
 }
