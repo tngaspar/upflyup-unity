@@ -13,6 +13,16 @@ public class ButtonRestart : MonoBehaviour
     public Image restartButtonImage;
     private float alpha = 20f;
 
+    public GameObject trail;
+
+
+    //avoids unwanted long trail in begining of scene load
+    public void Start()
+    {
+        trail.GetComponent<TrailRenderer>().Clear();
+    }
+
+
     public void Update()
     {
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
@@ -44,12 +54,20 @@ public class ButtonRestart : MonoBehaviour
 
             //setting player position to selected checkpoint
             if (player.transform.position.y < maxy.transform.position.y)
-            { 
+            {
+                //disable trail for movement
+                trail.GetComponent<TrailRenderer>().Clear();
+                trail.SetActive(false);
+
                 player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 player.GetComponent<Rigidbody2D>().angularVelocity = 0f;
                 player.GetComponent<Rigidbody2D>().rotation = 0f;
                 player.GetComponent<Transform>().rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
                 player.GetComponent<Transform>().position = maxy.transform.position;
+
+                //enable trail again
+                trail.SetActive(true);
+
             }
         }
     }
