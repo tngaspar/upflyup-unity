@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public float normalGameSpeed = 1f;
 
     public GameObject wonGameUI;
+    public GameObject pauseButton;
+    public GameObject restartButton;
 
     private void Start()
     {
@@ -16,5 +18,7 @@ public class GameManager : MonoBehaviour
     public void WonGame()
     {
         wonGameUI.SetActive(true);
+        pauseButton.SetActive(false);
+        restartButton.SetActive(false);
     }
 }

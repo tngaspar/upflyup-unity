@@ -3562,7 +3562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: -6}
   m_SizeDelta: {x: 162.38666, y: 61.02707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151128256
@@ -17805,6 +17805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalGameSpeed: 1.3
   wonGameUI: {fileID: 855414546}
+  pauseButton: {fileID: 1890097775}
+  restartButton: {fileID: 969897878}
 --- !u!4 &762224819
 Transform:
   m_ObjectHideFlags: 0
@@ -41420,7 +41422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -91}
+  m_AnchoredPosition: {x: 0, y: -137}
   m_SizeDelta: {x: 162.38666, y: 61.02707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339919515
@@ -47798,7 +47800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1598920578
 RectTransform:
   m_ObjectHideFlags: 0
