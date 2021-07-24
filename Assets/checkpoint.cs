@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class checkpoint : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class checkpoint : MonoBehaviour
     public Sprite newSprite;
     public Sprite newSprite2;
     public float secondsAnimationCycle;
+
+    public void Start()
+    {
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +28,9 @@ public class checkpoint : MonoBehaviour
                 other.GetComponent<Player>().highestCheckpointY = transform.position.y;
             }
 
-
+            //reset lives
+            GameObject.FindObjectOfType<ButtonRestart>().ResetLives();
+            
         }
     }
 

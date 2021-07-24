@@ -126,6 +126,7 @@ MonoBehaviour:
   newSprite: {fileID: 21300000, guid: dc4ed1a30ddf8c44da413efcf6c69401, type: 3}
   newSprite2: {fileID: 21300000, guid: dd7a8673c05ea7a4aa0a1395a84b50ce, type: 3}
   secondsAnimationCycle: 0.75
+  button: {fileID: 0}
 --- !u!1 &5733721431938266721
 GameObject:
   m_ObjectHideFlags: 0

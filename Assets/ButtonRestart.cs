@@ -15,11 +15,20 @@ public class ButtonRestart : MonoBehaviour
 
     public GameObject trail;
 
+    //implement lives:
+    public int maxLives = 5;
+    public Text livesText;
+    [HideInInspector] public int lives;
+
 
     //avoids unwanted long trail in begining of scene load
     public void Start()
     {
         trail.GetComponent<TrailRenderer>().Clear();
+
+        //load lives from save
+        lives = 5;
+        livesText.text = lives.ToString();
     }
 
 
@@ -69,6 +78,8 @@ public class ButtonRestart : MonoBehaviour
                 trail.SetActive(true);
 
             }
+
+            DecreaseLives();
         }
     }
 
@@ -84,6 +95,31 @@ public class ButtonRestart : MonoBehaviour
         }
         return maxy;
 
+    }
+
+
+    public void DecreaseLives()
+    {
+        if (lives > 0)
+        {
+            lives -= 1;
+            livesText.text = lives.ToString();
+        }
+    }
+
+    public void IncreaseLives()
+    {
+        if (lives < maxLives)
+        {
+            lives += 1;
+            livesText.text = lives.ToString();
+        }
+    }
+
+    public void ResetLives()
+    {
+        lives = maxLives;
+        livesText.text = lives.ToString();
     }
 
 }
