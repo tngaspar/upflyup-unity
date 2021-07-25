@@ -28,13 +28,13 @@ public class ButtonRestart : MonoBehaviour
         trail.GetComponent<TrailRenderer>().Clear();
 
         //load lives from save
-        lives = 5;
         livesText.text = lives.ToString();
     }
 
 
     public void Update()
     {
+
         //checkpoints
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
         if (checkpoints.Length != 0)
@@ -98,7 +98,7 @@ public class ButtonRestart : MonoBehaviour
 
             else
             {//play ad video here and restock lives // put a submenu here
-                Camera.main.GetComponent<AdsManager>().PlayRewardedAd();
+                gameObject.GetComponentInParent<AdsManager>().PlayRewardedAd();
             }
 
         }

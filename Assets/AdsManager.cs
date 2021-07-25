@@ -49,7 +49,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         {
             Debug.Log("PLAYER SHOULD BE REWARDED");
             //ad reward here
-            restartButton.GetComponent<ButtonRestart>().ResetLives();
+            GameObject.FindObjectOfType<ButtonRestart>().ResetLives();
         }
     }
 }

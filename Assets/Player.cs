@@ -7,16 +7,18 @@ public class Player : MonoBehaviour
 {
     public bool loadingActive = true;
 
-    public float highestCheckpointY;
+    [HideInInspector] public float highestCheckpointY;
 
     public Rigidbody2D rb;
 
-    public int seconds;
+    [HideInInspector]public int seconds;
     public Text timerText;
 
-    public int maxscore;
+    [HideInInspector] public int maxscore;
     public Text maxScoreText;
 
+    [HideInInspector] public int lives;
+    public Button restartbutton;
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
         // updating timer
         seconds = timerText.GetComponent<TimePlayed>().seconds;
         maxscore = maxScoreText.GetComponent<MaxScore>().mscore;
+        lives = restartbutton.GetComponent<ButtonRestart>().lives;
         SaveSystem.SavePlayer(this);
 
     }
@@ -81,6 +84,10 @@ public class Player : MonoBehaviour
         //Load maxScore
         maxscore = data.maxscore;
         maxScoreText.GetComponent<MaxScore>().mscore = maxscore;
+
+        //Load amoutn of lifes
+        lives = data.lives;
+        restartbutton.GetComponent<ButtonRestart>().lives = lives;
 
     }
 

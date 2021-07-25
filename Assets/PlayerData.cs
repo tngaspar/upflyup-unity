@@ -12,6 +12,7 @@ public class PlayerData
     public float highestCheckpointY;
     public int seconds;
     public int maxscore;
+    public int lives;
     
     public PlayerData (Player player, bool reset = false)
     {
@@ -41,6 +42,8 @@ public class PlayerData
 
             maxscore = player.GetComponent<Player>().maxscore;
 
+            lives = player.GetComponent<Player>().lives;
+
         }
         else if(reset == true)
         {
@@ -62,6 +65,7 @@ public class PlayerData
             highestCheckpointY = 0f;
             seconds = 0;
             maxscore = 0;
+            lives = 5;
 
         }
 
