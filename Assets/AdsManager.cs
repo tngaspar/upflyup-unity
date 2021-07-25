@@ -50,6 +50,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             Debug.Log("PLAYER SHOULD BE REWARDED");
             //ad reward here
             GameObject.FindObjectOfType<ButtonRestart>().ResetLives();
+            GameObject.FindObjectOfType<ButtonRestart>().PlayerToCheckpoint();
         }
     }
 }
