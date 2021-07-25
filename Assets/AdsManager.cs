@@ -7,6 +7,8 @@ using UnityEngine.Advertisements;
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
 
+    public Button restartButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         if (placementId == "Rewarded_Android" && showResult == ShowResult.Finished)
         {
             Debug.Log("PLAYER SHOULD BE REWARDED");
+            //ad reward here
+            restartButton.GetComponent<ButtonRestart>().ResetLives();
         }
     }
 }
