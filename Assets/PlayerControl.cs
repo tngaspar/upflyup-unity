@@ -29,10 +29,11 @@ public class PlayerControl : MonoBehaviour
     public bool onRope = false;
 
     public GameObject pauseMenu;
+    public GameObject adsMenu;
 
     private void Update()
     {
-        if (Input.touchCount > 0 && moves < numMoves && !pauseMenu.activeSelf)
+        if (Input.touchCount > 0 && moves < numMoves && !pauseMenu.activeSelf && !adsMenu.activeSelf)
         {
             touch = Input.GetTouch(0);
 

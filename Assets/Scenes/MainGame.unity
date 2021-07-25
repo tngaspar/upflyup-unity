@@ -675,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &65483978
 Animator:
   serializedVersion: 3
@@ -5978,8 +5978,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 1211688798}
+        m_MethodName: DeactivateAdMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8622,6 +8622,7 @@ MonoBehaviour:
   waterGravetyScale: 0.15
   onRope: 0
   pauseMenu: {fileID: 1598920577}
+  adsMenu: {fileID: 65483977}
 --- !u!120 &341889668
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -8936,7 +8937,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.68235296}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15734,6 +15735,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1443885772}
         m_MethodName: PlayRewardedAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1211688798}
+        m_MethodName: DeactivateAdMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31080,6 +31092,8 @@ MonoBehaviour:
   livesText: {fileID: 1824460974}
   lives: 0
   videoImage: {fileID: 337720445}
+  adCanvas: {fileID: 1211688801}
+  adMenu: {fileID: 0}
 --- !u!1001 &971167890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45564,6 +45578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5462f41e5da7443a97283e507d2de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adMenu: {fileID: 65483977}
+  gameManager: {fileID: 762224818}
+  pauseButton: {fileID: 1890097777}
+  restartButton: {fileID: 969897880}
 --- !u!114 &1211688799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69381,7 +69399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.68235296}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

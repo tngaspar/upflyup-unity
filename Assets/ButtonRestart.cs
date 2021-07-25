@@ -20,6 +20,9 @@ public class ButtonRestart : MonoBehaviour
     public Text livesText;
     [HideInInspector] public int lives;
     public Image videoImage;
+    public Canvas adCanvas;
+    public GameObject adMenu;
+
 
 
     //avoids unwanted long trail in begining of scene load
@@ -70,12 +73,13 @@ public class ButtonRestart : MonoBehaviour
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
         if (checkpoints.Length != 0)
         {
+            player.GetComponent<PlayerControl>().DragRelease();
+            //choosing the highest active checkpoint
+            maxy = getHighestCheckpoint(checkpoints);
+
             if (lives != 0)
             {
-                player.GetComponent<PlayerControl>().DragRelease();
 
-                //choosing the highest active checkpoint
-                maxy = getHighestCheckpoint(checkpoints);
 
                 //setting player position to selected checkpoint
                 if (player.transform.position.y < maxy.transform.position.y)
@@ -98,7 +102,10 @@ public class ButtonRestart : MonoBehaviour
 
             else
             {//play ad video here and restock lives // put a submenu here
-                gameObject.GetComponentInParent<AdsManager>().PlayRewardedAd();
+                adCanvas.GetComponent<AdMenu>().ActivateAdMenu();
+
+                //gameObject.GetComponentInParent<AdMenu>().ActivateAdMenu();
+                //gameObject.GetComponentInParent<AdsManager>().PlayRewardedAd();
             }
 
         }

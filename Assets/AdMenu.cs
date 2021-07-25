@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AdMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject adMenu;
+    public GameManager gameManager;
+
+    public Button pauseButton;
+    public Button restartButton;
+
+    public void ActivateAdMenu()
     {
-        
+        adMenu.SetActive(true);
+        Time.timeScale = 0f;
+        pauseButton.interactable = false;
+        restartButton.interactable = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeactivateAdMenu()
     {
-        
+        adMenu.SetActive(false);
+        Time.timeScale = gameManager.normalGameSpeed;
+        pauseButton.interactable = true;
+        restartButton.interactable = true;
     }
 }
