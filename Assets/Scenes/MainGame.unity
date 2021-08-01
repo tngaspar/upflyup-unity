@@ -4720,12 +4720,12 @@ PrefabInstance:
     - target: {fileID: 4827978655177726152, guid: 0fc06d1bb0370e148a0efdec08156bb2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.52
+      value: 17.49
       objectReference: {fileID: 0}
     - target: {fileID: 4827978655177726152, guid: 0fc06d1bb0370e148a0efdec08156bb2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 268.61
+      value: 268.83
       objectReference: {fileID: 0}
     - target: {fileID: 4827978655177726152, guid: 0fc06d1bb0370e148a0efdec08156bb2,
         type: 3}
@@ -19428,6 +19428,8 @@ MonoBehaviour:
   wonGameUI: {fileID: 855414546}
   pauseButton: {fileID: 1890097775}
   restartButton: {fileID: 969897878}
+  charclass: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &762224819
 Transform:
   m_ObjectHideFlags: 0

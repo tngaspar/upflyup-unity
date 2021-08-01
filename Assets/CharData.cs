@@ -7,6 +7,8 @@ public class CharData
 {
     public bool[] charsUnlocked;
     public int charActive;
+    public int numCompletes;
+    public int bestTimeSeconds;
 
     public CharData (CharClass charclass)
     {

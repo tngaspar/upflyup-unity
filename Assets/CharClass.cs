@@ -7,6 +7,8 @@ public class CharClass : MonoBehaviour
 {
     [HideInInspector] public bool[] charsUnlocked;
     [HideInInspector] public int charActive;
+    [HideInInspector] public int numCompletes;
+    [HideInInspector] public int bestTimeSeconds;
 
     private void Start()
     {
@@ -18,9 +20,12 @@ public class CharClass : MonoBehaviour
 
     }
 
-    public void SaveChar(int charnum)
+    public void SaveChar(int charnum = 99)
     {
-        charActive = charnum;
+        if (charnum != 99)
+        {
+            charActive = charnum;
+        }
         SaveSystem2.SaveChar(this);
     }
 
@@ -29,6 +34,8 @@ public class CharClass : MonoBehaviour
         CharData data = SaveSystem2.LoadChar();
         charsUnlocked = data.charsUnlocked;
         charActive = data.charActive;
+        numCompletes = data.numCompletes;
+        bestTimeSeconds = data.bestTimeSeconds;
     }
 
 }
