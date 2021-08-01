@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         seconds = charclass.GetComponent<CharClass>().bestTimeSeconds;
-        Debug.Log(seconds);
+
         int hours = (int)TimeSpan.FromSeconds(seconds).TotalHours;
         int minutes = TimeSpan.FromSeconds(seconds).Minutes;
         int secs = TimeSpan.FromSeconds(seconds).Seconds;
