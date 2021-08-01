@@ -19428,8 +19428,6 @@ MonoBehaviour:
   wonGameUI: {fileID: 855414546}
   pauseButton: {fileID: 1890097775}
   restartButton: {fileID: 969897878}
-  charclass: {fileID: 0}
-  player: {fileID: 0}
 --- !u!4 &762224819
 Transform:
   m_ObjectHideFlags: 0
@@ -29230,6 +29228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fa8fddcdd065b41828dac09d0d1f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 341889662}
 --- !u!95 &855414551
 Animator:
   serializedVersion: 3

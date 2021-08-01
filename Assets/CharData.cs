@@ -20,6 +20,9 @@ public class CharData
         charsUnlocked[3] = charclass.charsUnlocked[3];
 
         charActive = charclass.charActive;
+
+        numCompletes = charclass.numCompletes;
+        bestTimeSeconds = charclass.bestTimeSeconds;
     }
 
 }
