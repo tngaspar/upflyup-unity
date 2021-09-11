@@ -23,6 +23,8 @@ public class ButtonRestart : MonoBehaviour
     public Canvas adCanvas;
     public GameObject adMenu;
 
+    public bool adsOn = false;
+
 
 
     //avoids unwanted long trail in begining of scene load
@@ -87,7 +89,15 @@ public class ButtonRestart : MonoBehaviour
                 }
                 else
                 {//play ad video here and restock lives // put a submenu here
-                    adCanvas.GetComponent<AdMenu>().ActivateAdMenu();
+                    if(adsOn == true)
+                    {
+                        adCanvas.GetComponent<AdMenu>().ActivateAdMenu();
+                    }
+                    else
+                    {
+                        ResetLives();
+                        PlayerToCheckpoint();
+                    }
 
                     //gameObject.GetComponentInParent<AdMenu>().ActivateAdMenu();
                     //gameObject.GetComponentInParent<AdsManager>().PlayRewardedAd();
