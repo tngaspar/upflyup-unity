@@ -1533,7 +1533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00:00:00
+  m_Text: 
 --- !u!222 &547383524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2720,7 +2720,7 @@ MonoBehaviour:
   numComp: 0
   bestTimeText: {fileID: 547383523}
   numCompleted: {fileID: 2140408173}
-  charclass: {fileID: 1685623121}
+  charclass: {fileID: 0}
 --- !u!1 &1256484713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3857,18 +3857,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679969904}
   m_CullTransparentMesh: 0
---- !u!114 &1685623121 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1089476301466443103, guid: d9ce4ebcc4066e744b68101fb51cbad0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1089476302982583704}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bbf085b91179943acc2a217384053b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1985835465
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,7 +4355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &2140408174
 CanvasRenderer:
   m_ObjectHideFlags: 0

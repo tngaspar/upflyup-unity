@@ -48,11 +48,13 @@ public class MainMenu : MonoBehaviour
         int hours = (int)TimeSpan.FromSeconds(seconds).TotalHours;
         int minutes = TimeSpan.FromSeconds(seconds).Minutes;
         int secs = TimeSpan.FromSeconds(seconds).Seconds;
-
-        bestTimeText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minutes, secs);
-
         numComp = charclass.GetComponent<CharClass>().numCompletes;
-        numCompleted.text = numComp.ToString();
+
+        if (numComp != 0)
+        {
+            bestTimeText.text = string.Format("Best: {0:00}:{1:00}:{2:00}", hours, minutes, secs);
+            numCompleted.text = string.Format("Wins: {0}", numComp);
+        }       
     }
 
 
