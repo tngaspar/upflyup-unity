@@ -52,7 +52,7 @@ public class backgroundColor : MonoBehaviour
         }
 
         //v
-        if (v <= 0.8f)
+        if (v <= 0.2f)
         {
             vdir = true;
             v = v + speed;
