@@ -25,7 +25,8 @@ public class ButtonRestart : MonoBehaviour
 
     public bool adsOn = false;
 
-
+    public Text timeleftText;
+    private int secondsUntilLife = 60;
 
     //avoids unwanted long trail in begining of scene load
     public void Start()
@@ -34,6 +35,8 @@ public class ButtonRestart : MonoBehaviour
 
         //load lives from save
         livesText.text = lives.ToString();
+
+        InvokeRepeating("ResetLivesAfterTime", 1f, 1f);
     }
 
 
@@ -45,7 +48,7 @@ public class ButtonRestart : MonoBehaviour
         if (checkpoints.Length != 0)
         {
             maxy = getHighestCheckpoint(checkpoints);
-            if (player.transform.position.y < maxy.transform.position.y)
+            if (player.transform.position.y < maxy.transform.position.y & lives !=0)
             {
                 alpha = 1f;
             }
@@ -59,16 +62,33 @@ public class ButtonRestart : MonoBehaviour
         //video image
         if (lives == 0)
         {
-            videoImage.enabled = true;
+            //videoImage.enabled = true;
             livesText.enabled = false;
+            timeleftText.enabled = true;
+            Debug.Log(secondsUntilLife);
         }
         else
         {
-            videoImage.enabled = false;
+            //videoImage.enabled = false;
             livesText.enabled = true;
+            timeleftText.enabled = false;
         }
     }
 
+
+    public void ResetLivesAfterTime()
+    {
+        if (secondsUntilLife > 0 & lives < 5)
+        {
+            secondsUntilLife--;
+        }
+        else
+        {
+            IncreaseLives();
+            secondsUntilLife = 60;
+        }
+        timeleftText.text = secondsUntilLife.ToString();
+    }
 
     public void ButtonClick()
     {
@@ -95,8 +115,8 @@ public class ButtonRestart : MonoBehaviour
                     }
                     else
                     {
-                        ResetLives();
-                        PlayerToCheckpoint();
+                       // ResetLives();
+                        //PlayerToCheckpoint();
                     }
 
                     //gameObject.GetComponentInParent<AdMenu>().ActivateAdMenu();
