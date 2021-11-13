@@ -18,7 +18,7 @@ public class ButtonRestart : MonoBehaviour
     //implement lives:
     public int maxLives = 5;
     public Text livesText;
-    [HideInInspector] public int lives;
+    [HideInInspector] public int lives=5;
     public Image videoImage;
     public Canvas adCanvas;
     public GameObject adMenu;
@@ -26,7 +26,7 @@ public class ButtonRestart : MonoBehaviour
     public bool adsOn = false;
 
     public Text timeleftText;
-    private int secondsUntilLife = 60;
+    public int secondsUntilLife = 60;
 
     //avoids unwanted long trail in begining of scene load
     public void Start()
@@ -35,6 +35,7 @@ public class ButtonRestart : MonoBehaviour
 
         //load lives from save
         livesText.text = lives.ToString();
+        timeleftText.text = secondsUntilLife.ToString();
 
         InvokeRepeating("ResetLivesAfterTime", 1f, 1f);
     }
@@ -42,7 +43,6 @@ public class ButtonRestart : MonoBehaviour
 
     public void Update()
     {
-
         //checkpoints
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
         if (checkpoints.Length != 0)
@@ -65,7 +65,6 @@ public class ButtonRestart : MonoBehaviour
             //videoImage.enabled = true;
             livesText.enabled = false;
             timeleftText.enabled = true;
-            Debug.Log(secondsUntilLife);
         }
         else
         {

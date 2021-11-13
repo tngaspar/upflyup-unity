@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Text maxScoreText;
 
     [HideInInspector] public int lives;
+    [HideInInspector] public int secondsUntilLife;
     public Button restartbutton;
 
     private void Start()
@@ -26,6 +27,10 @@ public class Player : MonoBehaviour
         if (loadingActive == true && SaveSystem.LoadPlayer() != null)
         {
             LoadPlayer();
+        }
+        else
+        {
+            restartbutton.GetComponent<ButtonRestart>().lives = 5;
         }
         InvokeRepeating("SavePlayer", 1f, 1f);
     }
@@ -37,6 +42,7 @@ public class Player : MonoBehaviour
         seconds = timerText.GetComponent<TimePlayed>().seconds;
         maxscore = maxScoreText.GetComponent<MaxScore>().mscore;
         lives = restartbutton.GetComponent<ButtonRestart>().lives;
+        secondsUntilLife = restartbutton.GetComponent<ButtonRestart>().secondsUntilLife;
         SaveSystem.SavePlayer(this);
 
     }
@@ -45,6 +51,7 @@ public class Player : MonoBehaviour
     {
         // call this function to reset the game like the old reset file
         seconds = 0;
+        lives = 5;
         SaveSystem.SavePlayer(this, true);
     }
 
@@ -89,6 +96,9 @@ public class Player : MonoBehaviour
         lives = data.lives;
         restartbutton.GetComponent<ButtonRestart>().lives = lives;
 
+        //load seconds until new live
+        secondsUntilLife = data.secondsUntilLife;
+        restartbutton.GetComponent<ButtonRestart>().secondsUntilLife = secondsUntilLife;
     }
 
 

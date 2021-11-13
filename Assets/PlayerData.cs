@@ -13,7 +13,9 @@ public class PlayerData
     public int seconds;
     public int maxscore;
     public int lives;
-    
+    public int secondsUntilLife;
+
+
     public PlayerData (Player player, bool reset = false)
     {
 
@@ -44,6 +46,8 @@ public class PlayerData
 
             lives = player.GetComponent<Player>().lives;
 
+            secondsUntilLife = player.GetComponent<Player>().secondsUntilLife;
+
         }
         else if(reset == true)
         {
@@ -66,6 +70,7 @@ public class PlayerData
             seconds = 0;
             maxscore = 0;
             lives = 5;
+            secondsUntilLife = 60;
 
         }
 
