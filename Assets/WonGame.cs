@@ -38,7 +38,10 @@ public class WonGame : MonoBehaviour
     public void countWin()
     {
         charclass.GetComponent<CharClass>().numCompletes += 1;
-        charclass.GetComponent<CharClass>().bestTimeSeconds = player.GetComponent<Player>().seconds;
+        if (charclass.GetComponent<CharClass>().bestTimeSeconds > player.GetComponent<Player>().seconds | charclass.GetComponent<CharClass>().bestTimeSeconds == 0)
+        {
+            charclass.GetComponent<CharClass>().bestTimeSeconds = player.GetComponent<Player>().seconds;
+        }
         charclass.GetComponent<CharClass>().SaveChar();
     }
 }
