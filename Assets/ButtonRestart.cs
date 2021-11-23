@@ -43,6 +43,7 @@ public class ButtonRestart : MonoBehaviour
 
     public void Update()
     {
+        ResetLives();
         //checkpoints
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
         if (checkpoints.Length != 0)
