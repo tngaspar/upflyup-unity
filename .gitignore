@@ -33,5 +33,5 @@ sysinfo.txt
 *.stackdump
 
 # Assets
-Assets/*/
+Scripts/*/
 # ===== 
