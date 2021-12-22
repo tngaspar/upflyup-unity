@@ -1,5 +1,5 @@
 # ===========================
-# Default Collab Ignore Rules
+# Ignore Rules
 # ===========================
 
 # OS Generated
@@ -33,4 +33,5 @@ sysinfo.txt
 *.stackdump
 
 # Assets
+Assets/*/
 # ===== 
