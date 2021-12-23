@@ -12,7 +12,7 @@
         <img src="https://play-lh.googleusercontent.com/Iz277qJ5n5T4Gy8yVl6uVsmI364SUt7RF3hyayNWxVqTwY82uWoMj98CHfE9xjI0hQVx=s180-rw" alt="Logo" >
     </a>
     <br />
-    <a href="https://play.google.com/store/apps/details?id=com.ShinyLakeDev.UpFlyUp"><strong><h2>Play Store Page »</h2></strong></a>
+    <h3><a href="https://play.google.com/store/apps/details?id=com.ShinyLakeDev.UpFlyUp"><strong>Play Store Page »</strong></a></h3>
     <br />
     <br />
   </p>
