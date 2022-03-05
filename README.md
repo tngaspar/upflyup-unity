@@ -21,7 +21,7 @@
 
 ## About The Project
 
-A short platformer mobile game built on the [Unity](https://unity.com/) game engine using <strong>C#</strong> to apply simple Object Oriented Programming concepts.
+A short platformer mobile game built on the [Unity](https://unity.com/) game engine using <strong>C#</strong> for scripting and to apply simple Object Oriented Programming concepts.
 I developed this project purily for learning purposes.
 
 The most recent vesion of the game may be found at:
